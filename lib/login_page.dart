@@ -3,6 +3,8 @@ import 'package:sign_in_flutter/sign_in.dart';
 import 'package:sign_in_flutter/first_screen.dart';
 import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 
+import 'facebook_page.dart';
+
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -23,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(height: 50),
                   _googleSignInButton(),
                   SizedBox(height: 50),
-//                  _facebookSignInButton()
+                  _facebookSignInButton()
                 ],
               )),
         ));
@@ -46,19 +48,19 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-//  Widget _facebookSignInButton() {
-//    return FacebookSignInButton(onPressed: () {
-//      onPressed: () {
-//        signInWithFacebook1().whenComplete(() {
-//          Navigator.of(context).push(
-//            MaterialPageRoute(
-//              builder: (context) {
-//                return FirstScreen();
-//              },
-//            ),
-//          );
-//        });
-//      };
-//    });
-//  }
+  Widget _facebookSignInButton() {
+    return FacebookSignInButton(
+      onPressed: () {
+        signInWithFacebook1().whenComplete(() {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) {
+                return FacebookPage();
+              },
+            ),
+          );
+        });
+      }
+    );
+  }
 }
