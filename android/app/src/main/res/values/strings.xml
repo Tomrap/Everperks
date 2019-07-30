@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="app_name">FLutter App</string>
-<string name="fb_login_protocol_scheme">fb472261440001560</string>
+<string name="app_name">flutter-app</string>
+<string name="facebook_app_id">212494546364934</string>
+<string name="fb_login_protocol_scheme">fb212494546364934</string>
 </resources>
