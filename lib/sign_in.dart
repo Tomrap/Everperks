@@ -79,6 +79,9 @@ Future<String> signInWithFacebook1() async {
     FacebookAuthProvider.getCredential(accessToken: accessToken);
     final user = await _auth.signInWithCredential(facebookAuthCred);
 
+    final FirebaseUser currentUser = await _auth.currentUser();
+
+    print(currentUser)
 
     name = "tomek";
     email = "mail";
